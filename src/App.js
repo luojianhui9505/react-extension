@@ -1,5 +1,5 @@
 import React, { Component,Fragment } from 'react';
-import Demo from './components/10_errorBoundary/Parent'
+import Demo from './components/01_setState'
 class App extends Component {
     render() {
         return (

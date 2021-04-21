@@ -5,7 +5,7 @@ export default class Parent extends Component {
     hasError: false,
   };
   static getDerivedStateFromError(error) {
-    // 更新 state 使下一次渲染可以显降级 UI
+    // 更新 state 使下一次渲染可以显示 UI
     return { hasError: true };
   }
   render() {

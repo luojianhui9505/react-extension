@@ -4,6 +4,10 @@ export default class Demo extends Component {
   state = {
     count: 0,
   };
+  constructor(props){
+      super(props);
+      this.add=this.add.bind(this);
+  }
   /* setState对象式 */
   /* add = () => {
     const { count } = this.state;
@@ -12,7 +16,7 @@ export default class Demo extends Component {
     });
   }; */
   //   setState函数式
-  add = () => {
+  add() {
     this.setState(
       (state, props) => {
         console.log(props);
@@ -22,8 +26,9 @@ export default class Demo extends Component {
         console.log(this.state.count);
       }
     );
-  };
+  }
   render() {
+    console.log(this)
     return (
       <div>
         <h2>当前结果为：{this.state.count}</h2>
